@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="LocalLandingCo builds a professional, mobile-first website for your local business in 7 days. Customers find you on Google and reach you on WhatsApp or by phone.">
+<meta name="theme-color" content="#0b0c10">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LocalLandingCo: websites for local businesses, live in 7 days">
+<meta property="og:description" content="LocalLandingCo builds a professional, mobile-first website for your local business in 7 days. Customers find you on Google and reach you on WhatsApp or by phone.">
+<!-- Before launch: add <link rel="canonical"> and og:url with your real address, and an og:image (1200x630) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c10'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ffb42a'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "LocalLandingCo", "description": "LocalLandingCo builds a professional, mobile-first website for your local business in 7 days. Customers find you on Google and reach you on WhatsApp or by phone.", "areaServed": "Maharashtra, India", "serviceType": "Website design for local businesses"}</script>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>LocalLandingCo</title>
+<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Bricolage Grotesque";font-weight:500 700;font-display:swap;src:url(fonts/bricolage-grotesque.woff2) format("woff2")}@font-face{font-family:"Hanken Grotesk";font-weight:400 600;font-display:swap;src:url(fonts/hanken-grotesk.woff2) format("woff2")}</style>
+<style>
+/* Direction: a street at dusk. Everything is dark and quiet; the only lit things are the client's page and the marigold of a switched-on signboard.
+   Five colours: ink, warm white, marigold, paper (the client's page), WhatsApp green (only on WhatsApp actions). */
+:root{
+  color-scheme:dark;
+  --bg:#0b0c10; --bg-2:#101218; --bg-3:#171a22; --line:#242832; --line-2:#3a3f4c;
+  --fg:#f3efe6; --fg-2:#b6b3aa; --fg-3:#8f8e8a;
+  --lamp:#ffb42a; --lamp-ink:#1c1300; --lamp-a:255,180,42;
+  --wa:#2bd46b; --wa-ink:#04220f;
+  --paper:#f6f2e9; --paper-ink:#18212c; --paper-2:#4d5762; --paper-3:#e9e3d6;
+  --display:"Bricolage Grotesque","BG fb A","BG fb R",Arial,sans-serif;
+  --body:"Hanken Grotesk","HG fb A","HG fb R",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --deva:"Noto Sans Devanagari","Kohinoor Devanagari","Nirmala UI","Mangal",sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.3,1.45,.5,1);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .3 0 0 0 -.125'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23n%29'/%3E%3C/svg%3E");
+  --r:16px;
+}
+/* Fallback faces sized to the web fonts, so text does not jump when they arrive on a slow connection */
+@font-face{font-family:"BG fb A";src:local("Arial Bold"),local("Arial-BoldMT");font-weight:500 700;size-adjust:102.14%;ascent-override:91.05%;descent-override:26.43%;line-gap-override:0%}
+@font-face{font-family:"BG fb R";src:local("Roboto Bold"),local("Roboto-Bold");font-weight:500 700;size-adjust:108.67%;ascent-override:85.58%;descent-override:24.85%;line-gap-override:0%}
+@font-face{font-family:"HG fb A";src:local("Arial"),local("ArialMT");font-weight:400 600;size-adjust:101.52%;ascent-override:98.5%;descent-override:29.85%;line-gap-override:0%}
+@font-face{font-family:"HG fb R";src:local("Roboto"),local("Roboto-Regular");font-weight:400 600;size-adjust:101.23%;ascent-override:98.79%;descent-override:29.93%;line-gap-override:0%}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--bg) var(--grain);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+h1,h2,h3,p,ol,ul,figure,dl,dd{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lamp);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:70;background:var(--lamp);color:var(--lamp-ink);padding:.7rem 1rem;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + .6rem)}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{position:relative;padding-block:clamp(3.6rem,9vw,8rem)}
+.tight{padding-top:0}
+h1,h2,h3{font-family:var(--display);font-weight:650;line-height:1.02;letter-spacing:-.028em;text-wrap:balance}
+h2{font-size:clamp(2.05rem,4.8vw,3.6rem)}
+h3{font-size:1.3rem;line-height:1.2;letter-spacing:-.012em}
+.label{font:600 .72rem/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3)}
+.lede{color:var(--fg-2);max-width:56ch;font-size:1.125rem}
+.head{display:flex;flex-direction:column;gap:1.15rem;margin-bottom:clamp(2.4rem,5vw,4rem)}
+.head .label{display:flex;align-items:center;gap:.75rem}
+.head .label::before{content:"";width:1.75rem;height:1px;background:var(--lamp);transform-origin:left;transition:transform 1s var(--ease) .15s}
+.head .label.pre::before{transform:scaleX(0)}
+.lit{color:var(--lamp);text-shadow:0 0 44px rgba(var(--lamp-a),.42)}
+@keyframes switchon{0%,16%{color:var(--fg-3);text-shadow:none}17%,22%{color:var(--lamp);text-shadow:none}23%,37%{color:var(--fg-3);text-shadow:none}38%,45%{color:var(--lamp);text-shadow:none}46%,53%{color:#9a7a3c;text-shadow:none}54%,100%{color:var(--lamp);text-shadow:0 0 44px rgba(var(--lamp-a),.42)}}
+@keyframes flick{0%,12%{opacity:0}13%,17%{opacity:.9}18%,30%{opacity:.12}31%,38%{opacity:1}39%,46%{opacity:.4}47%,100%{opacity:1}}
+
+/* buttons: follow the pointer a little, press in when tapped */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:.8rem 1.45rem;border-radius:999px;font:600 1rem/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;
+  transform:translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .45s var(--ease),box-shadow .35s,border-color .3s,background-color .3s}
+.btn:active{transform:translate3d(var(--tx,0px),var(--ty,0px),0) scale(.965);transition-duration:.12s}
+.btn svg{width:20px;height:20px;flex:none;transform:translate(calc(var(--tx,0px)*.4),calc(var(--ty,0px)*.4));transition:transform .45s var(--ease)}
+.btn-wa{background:var(--wa);color:var(--wa-ink);box-shadow:0 0 0 0 rgba(43,212,107,0)}
+.btn-wa:hover{box-shadow:0 0 0 6px rgba(43,212,107,.13)}
+.btn-ghost{border-color:var(--line-2);color:var(--fg);background:transparent}
+.btn-ghost:hover{border-color:rgba(var(--lamp-a),.7)}
+.btn-ghost .arr{display:inline-block;transition:transform .45s var(--ease)}
+.btn-ghost:hover .arr{transform:translateY(3px)}
+.btn-sm{min-height:44px;padding:.55rem 1.05rem;font-size:.9375rem}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;border-bottom:1px solid transparent;transition:background-color .4s,border-color .4s}
+.nav.stuck{background:rgba(11,12,16,.93);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.6rem;min-height:44px;font:700 1.15rem/1 var(--display);letter-spacing:-.02em;text-decoration:none}
+.dot{width:11px;height:11px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 4px rgba(var(--lamp-a),.16),0 0 22px rgba(var(--lamp-a),.7)}
+.nav .dot{animation:flick 1.3s linear .2s both}
+.nav ul{display:none;gap:2.1rem}
+.nav ul a{position:relative;display:flex;align-items:center;min-height:44px;font-size:.9375rem;color:var(--fg-2);text-decoration:none;transition:color .25s}
+.nav ul a::after{content:"";position:absolute;left:50%;bottom:.3rem;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--lamp);transform:scale(0);transition:transform .45s var(--spring)}
+.nav ul a:hover{color:var(--fg)}
+.nav ul a:hover::after{transform:scale(.6)}
+.nav ul a[aria-current]{color:var(--fg)}
+.nav ul a[aria-current]::after{transform:scale(1);box-shadow:0 0 10px rgba(var(--lamp-a),.8)}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{padding-block:clamp(2.4rem,6vw,4.6rem) clamp(3.5rem,8vw,6rem)}
+.hero-light{position:absolute;inset:-68px 0 0;pointer-events:none;background:radial-gradient(44% 52% at 79% 50%,rgba(var(--lamp-a),.17),transparent 72%);animation:lighton 1.8s ease 1.9s both}
+@keyframes lighton{from{opacity:.2}}
+.hero .wrap{position:relative;display:grid;gap:clamp(2.6rem,6vw,4rem);align-items:center}
+@media(min-width:980px){.hero .wrap{grid-template-columns:1.08fr .92fr}}
+.hero-copy{display:flex;flex-direction:column;gap:1.6rem;min-width:0}
+.hero h1{font-size:clamp(2.95rem,8.4vw,6rem);font-weight:700;letter-spacing:-.035em;line-height:.98}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.w>span{display:inline-block;animation:rise 1.05s var(--ease) both;animation-delay:calc(var(--i)*80ms + 100ms)}
+.w>span.lit{animation:rise 1.05s var(--ease) both,switchon 1.25s linear both;animation-delay:420ms,1.2s}
+@keyframes rise{from{transform:translateY(108%)}}
+.fade{animation:fade .9s var(--ease) both;animation-delay:var(--d,.6s)}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;color:var(--fg-2);font-size:.9375rem}
+.hero-facts li{display:flex;align-items:center;gap:.55rem}
+.hero-facts li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--lamp)}
+
+/* hero demo: a spoken sentence becomes a lit page, and an enquiry comes back */
+.demo{display:flex;flex-direction:column;gap:.9rem;min-width:0}
+.demo.wait *,.demo.wait *::after{animation-play-state:paused!important}
+.demo .label{display:block;margin-bottom:.55rem}
+.raw{max-width:23rem;background:var(--bg-3);border:1px solid var(--line);border-radius:16px 16px 16px 4px;padding:.9rem 1.05rem;font-size:.9375rem;color:var(--fg-2);line-height:1.5}
+.raw span{display:inline-block;animation:word .45s var(--ease) both;animation-delay:calc(.55s + var(--i)*55ms)}
+@keyframes word{from{opacity:0;transform:translateY(5px)}}
+.pipe{position:relative;display:flex;align-items:center;gap:.5rem;padding-left:.4rem;height:2rem}
+.pipe span{font:600 .68rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;padding:.36rem .65rem;border-radius:999px;border:1px solid rgba(var(--lamp-a),.5);color:var(--lamp);animation:chip .6s var(--ease) both;animation-delay:var(--d)}
+.pipe b{position:relative;flex:0 1 22px;min-width:10px;height:1px;background:var(--line-2);overflow:visible}
+.pipe b::after{content:"";position:absolute;left:0;top:-2px;width:5px;height:5px;border-radius:50%;background:var(--lamp);box-shadow:0 0 8px var(--lamp);animation:signal .5s ease-in-out both;animation-delay:var(--d)}
+@keyframes chip{from{opacity:.22;transform:scale(.94)}}
+@keyframes signal{0%{opacity:0;transform:translateX(0)}30%{opacity:1}100%{opacity:0;transform:translateX(20px)}}
+.tilt{transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s var(--ease)}
+.site{background:var(--paper);color:var(--paper-ink);border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 34px 90px -22px rgba(var(--lamp-a),.4),0 14px 30px rgba(0,0,0,.5);animation:print 1.1s var(--ease) 2.05s both}
+@keyframes print{from{opacity:0;clip-path:inset(0 0 100% 0 round 14px)}to{opacity:1;clip-path:inset(0 0 0 0 round 14px)}}
+.site-bar{display:flex;align-items:center;gap:.4rem;padding:.6rem .8rem;background:var(--paper-3);font:500 .7rem/1 var(--body);color:var(--paper-2)}
+.site-bar i{width:8px;height:8px;border-radius:50%;background:#cbc3b2}
+.site-bar em{font-style:normal;margin-left:.5rem;background:var(--paper);padding:.28rem .75rem;border-radius:999px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.site-body{padding:1.4rem 1.3rem 2.6rem;display:flex;flex-direction:column;gap:.95rem}
+.site-body>*{animation:fade .8s var(--ease) both;animation-delay:var(--d)}
+.site-kicker{font:600 .7rem/1.35 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--paper-2)}
+.site-h{font:700 clamp(1.35rem,4.6vw,1.8rem)/1.08 var(--display);letter-spacing:-.022em;color:var(--paper-ink)}
+.site-btns{display:flex;flex-wrap:wrap;gap:.5rem}
+.s-wa,.s-call{display:inline-flex;align-items:center;min-height:44px;font:600 .82rem/1 var(--body);padding:.6rem .95rem;border-radius:9px}
+.s-wa{position:relative;border:0;background:var(--wa);color:var(--wa-ink);cursor:pointer;transition:transform .2s var(--ease)}
+.s-wa:active{transform:scale(.95)}
+.s-wa::after{content:"";position:absolute;inset:0;border-radius:9px;border:2px solid var(--wa);animation:ring 2.8s ease-out 4.6s infinite}
+@keyframes ring{from{transform:scale(1);opacity:.7}60%,to{transform:scale(1.16,1.45);opacity:0}}
+.s-call{border:1px solid #b9c0c7;color:var(--paper-ink)}
+.site-caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}
+.site-caps li{font-size:.8rem;font-weight:500;padding:.55rem .65rem;background:var(--paper-3);border-radius:8px;color:var(--paper-ink)}
+.site-trust{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;font-size:.78rem;color:var(--paper-2);border-top:1px solid #dcd5c6;padding-top:.8rem}
+.site-trust b{color:var(--paper-ink)}
+.ping{position:relative;z-index:2;display:flex;align-items:flex-start;gap:.7rem;width:min(19.5rem,92%);margin:-1.9rem -.4rem 0 auto;padding:.75rem .9rem;background:var(--bg-3);border:1px solid var(--line-2);border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.55);font-size:.84rem;line-height:1.35;color:var(--fg-2);animation:ping .75s var(--spring) 3.5s both}
+.ping.go{animation:ping2 .75s var(--spring) both}
+@keyframes ping{from{opacity:0;transform:translateY(16px) scale(.94)}}
+@keyframes ping2{from{opacity:0;transform:translateY(16px) scale(.94)}}
+.ping svg{flex:none;width:30px;height:30px;padding:6px;border-radius:9px;background:var(--wa);color:var(--wa-ink)}
+.ping b{display:block;color:var(--fg);font-weight:600}
+.ping time{margin-left:auto;font-size:.72rem;color:var(--fg-3)}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding-block:1.1rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:slide 52s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee ul{display:flex;flex:none}
+.marquee li{font:500 1.05rem/1 var(--display);color:var(--fg-2);padding-inline:1.4rem;white-space:nowrap;display:flex;align-items:center;gap:2.8rem}
+.marquee li::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--lamp)}
+@keyframes slide{to{transform:translate3d(-50%,0,0)}}
+
+/* problem: four open columns, each under a short lit rule */
+.gap{position:relative;display:grid;grid-template-columns:7.3rem minmax(0,1fr);gap:.35rem 1rem;padding-block:1.35rem;border-top:1px solid var(--line)}
+.gap::before,.gap::after{content:"";position:absolute;left:0;top:-1px;height:1px;transform-origin:left}
+.gap::before{width:2.4rem;background:var(--lamp);transition:transform 1s var(--ease) calc(var(--rd,0s) + .3s)}
+.gap.pre::before{transform:scaleX(0)}
+.gap::after{width:100%;background:rgba(var(--lamp-a),.55);transform:scaleX(0);transition:transform .7s var(--ease)}
+.gap h3{grid-row:1/3;font-size:1.3rem}
+.gap p{color:var(--fg-2);font-size:.98rem}
+.gap .fix{color:var(--fg);display:flex;gap:.55rem}
+.gap .fix::before{content:"→";color:var(--lamp);flex:none}
+@media(hover:hover){.gap:hover::after{transform:scaleX(1)}}
+@media(min-width:860px){
+  .gaps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.4rem}
+  .gap{display:flex;flex-direction:column;gap:.7rem;padding-block:1.5rem 0}
+  .gap h3{font-size:1.75rem}
+}
+
+/* package: a ledger, not a card grid. The rule under the pointer lights up. */
+.row{position:relative;display:grid;grid-template-columns:2.1rem minmax(0,1fr);gap:.35rem .95rem;padding-block:1.35rem;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:radial-gradient(260px circle at var(--mx,50%) 50%,var(--lamp),transparent);opacity:0;transition:opacity .45s}
+.row>svg{grid-row:1/3;width:26px;height:26px;color:var(--lamp);margin-top:.1rem;transition:transform .55s var(--ease)}
+.row h3{transition:transform .55s var(--ease)}
+.row-b{grid-column:2;display:flex;flex-direction:column;gap:.8rem;min-width:0}
+.row-b p{color:var(--fg-2);font-size:.98rem;max-width:52ch}
+.row-b ul{display:none;flex-wrap:wrap;gap:.4rem}
+.row-b li{font-size:.8rem;color:var(--fg-2);border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem}
+@media(min-width:640px){.row-b ul{display:flex}}
+@media(min-width:900px){
+  .row{grid-template-columns:3.2rem minmax(0,.8fr) minmax(0,1.2fr);gap:0 1.6rem;padding-block:2rem;align-items:start}
+  .row>svg{grid-row:auto}
+  .row h3{font-size:1.55rem}
+  .row-b{grid-column:3}
+}
+@media(hover:hover){.row:hover::before{opacity:1}.row:hover>svg{transform:translateX(5px) scale(1.08)}.row:hover h3{transform:translateX(6px)}}
+
+/* lit rule that opens a band */
+.rule{position:relative;height:1px;background:linear-gradient(90deg,transparent,var(--line-2) 24%,rgba(var(--lamp-a),.75) 50%,var(--line-2) 76%,transparent);transition:transform 1.4s var(--ease),opacity 1.4s}
+.rule::after{content:"";position:absolute;left:22%;right:22%;top:1px;height:130px;background:radial-gradient(50% 100% at 50% 0,rgba(var(--lamp-a),.09),transparent);pointer-events:none}
+.rule.pre{transform:scaleX(.2);opacity:0}
+
+/* process */
+.process{background:var(--grain),linear-gradient(180deg,var(--bg-2),var(--bg));padding-top:0}
+.process .wrap{display:grid;gap:clamp(2rem,5vw,4rem);padding-top:clamp(4.2rem,9vw,8rem)}
+@media(min-width:940px){.process .wrap{grid-template-columns:.8fr 1.2fr}.process .head{position:sticky;top:6.5rem;align-self:start;margin-bottom:0}}
+.timeline{position:relative;padding-left:2.4rem}
+.track{position:absolute;left:7px;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.track i{position:absolute;inset:0;background:var(--lamp);transform:scaleY(0);transform-origin:top;border-radius:2px}
+.track b{position:absolute;left:-4px;top:-5px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 16px 4px rgba(var(--lamp-a),.65);opacity:0;transition:opacity .4s}
+.steps{display:flex;flex-direction:column;gap:2.5rem}
+.step{position:relative;display:flex;flex-direction:column;gap:.5rem}
+.step::before{content:"";position:absolute;left:-2.4rem;top:.25rem;width:16px;height:16px;border-radius:50%;background:var(--bg-2);border:2px solid var(--line-2);transition:border-color .4s,background-color .4s,box-shadow .4s,transform .5s var(--spring)}
+.step.on::before{border-color:var(--lamp);background:var(--lamp);box-shadow:0 0 18px rgba(var(--lamp-a),.6);transform:scale(1.12)}
+.step .label{color:var(--fg-3);transition:color .4s}
+.step.on .label{color:var(--lamp)}
+.step p{color:var(--fg-2);max-width:54ch}
+
+/* trade layouts */
+.tabs{position:relative;display:flex;gap:.2rem;overflow-x:auto;padding:.3rem;border:1px solid var(--line);border-radius:999px;background:var(--bg-2);width:fit-content;max-width:100%;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.pill{position:absolute;left:0;top:.3rem;bottom:.3rem;width:0;border-radius:999px;background:var(--lamp);transition:transform .55s var(--ease),width .55s var(--ease)}
+.tab{position:relative;flex:none;min-height:44px;padding:.5rem 1.05rem;border-radius:999px;border:0;background:transparent;color:var(--fg-2);font:500 .9375rem/1 var(--body);cursor:pointer;transition:color .3s}
+.tab:hover{color:var(--fg)}
+.tab[aria-selected="true"]{background:var(--lamp);color:var(--lamp-ink);font-weight:600}
+.tabs.js .tab[aria-selected="true"]{background:transparent}
+.tpl{display:grid;gap:1.8rem;margin-top:1.8rem}
+@media(min-width:860px){.tpl{grid-template-columns:.8fr 1.2fr;gap:3.5rem;align-items:start}}
+.tpl-copy{display:flex;flex-direction:column;gap:.9rem;min-width:0}
+.tpl-copy h3{font-size:1.7rem}
+.tpl-copy p{color:var(--fg-2)}
+.tpl-copy .sample{font-size:.875rem;color:var(--fg-3)}
+.stack{display:flex;flex-direction:column;gap:.4rem;min-width:0;padding:.9rem;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
+.stack li{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.72rem .95rem;background:var(--bg-3);border:1px solid var(--line);border-radius:10px;font-size:.95rem;animation:rowin .55s var(--ease) both;animation-delay:calc(var(--i)*45ms)}
+.stack li::after{content:"";flex:0 1 34%;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--line-2),transparent);transform-origin:right;transition:transform .5s var(--ease)}
+.stack li:first-child{border-color:rgba(var(--lamp-a),.55)}
+.stack li:last-child{background:rgba(43,212,107,.1);border-color:rgba(43,212,107,.4)}
+@media(hover:hover){.stack li:hover::after{transform:scaleX(1.5)}}
+@keyframes rowin{from{opacity:0;transform:translateX(-12px)}}
+/* phone: the stack reads as a small page plan, two sections per row */
+@media(max-width:639px){.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{padding:.6rem .7rem;font-size:.86rem;line-height:1.3}.stack li::after{display:none}.stack li:first-child,.stack li:last-child{grid-column:1/-1;padding-block:.95rem}.steps{gap:2rem}}
+
+/* work */
+.work{display:grid;gap:1.3rem}
+@media(min-width:820px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.glowb{position:relative}
+.glowb::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(var(--lamp-a),.95),transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s;pointer-events:none}
+.glowb::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(var(--lamp-a),.06),transparent 70%);opacity:0;transition:opacity .5s;pointer-events:none}
+@media(hover:hover){.glowb:hover::before,.glowb:hover::after{opacity:1}}
+.job{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;min-width:0}
+.shot{aspect-ratio:16/9;max-width:100%;padding:1.4rem 1.4rem 0;overflow:hidden;border-radius:var(--r) var(--r) 0 0}
+.frame{height:100%;background:var(--bg-3);border:1px solid var(--line-2);border-bottom:0;border-radius:10px 10px 0 0;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .7s var(--ease)}
+.frame i{display:block;border-radius:4px;background:var(--line-2)}
+.frame .t1{width:26%;height:7px;background:var(--fg-3)}
+.frame .t2{width:64%;height:14px;background:var(--fg-2)}
+.frame .cta{width:24%;height:20px;border-radius:6px;background:var(--wa)}
+.frame .grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.3rem}
+.frame .grid i{transition:transform .7s var(--ease);transition-delay:calc(var(--k)*50ms)}
+.frame .list{flex:1;display:flex;flex-direction:column;gap:.4rem;margin-top:.3rem}
+.frame .list i{height:16%;background:transparent;border:1px dashed var(--line-2);transition:transform .7s var(--ease);transition-delay:calc(var(--k)*50ms)}
+@media(hover:hover){.job:hover .frame{transform:translateY(-8px)}.job:hover .frame .grid i,.job:hover .frame .list i{transform:translateY(-5px)}}
+.job-body{padding:1.5rem 1.6rem 1.7rem;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--line)}
+.job-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.job-top h3{font-size:1.5rem}
+.status{font:600 .68rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:.38rem .7rem;border-radius:999px;border:1px solid var(--line-2);color:var(--fg-2);display:inline-flex;align-items:center;gap:.5rem}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid var(--fg-3)}
+.status.now{color:var(--fg);border-color:rgba(var(--lamp-a),.5)}
+.status.now::before{border:0;background:var(--lamp);box-shadow:0 0 8px var(--lamp)}
+.job .desc{color:var(--fg-2);font-size:.98rem}
+
+/* statement: lights up word by word as it is read */
+.statement p{font:600 clamp(1.8rem,4.6vw,3.4rem)/1.12 var(--display);letter-spacing:-.025em;max-width:22ch;text-wrap:balance}
+.statement .label{display:block;margin-bottom:1.5rem}
+.wd{transition:opacity .6s var(--ease)}
+.split .wd{opacity:.2}
+.split .wd.on{opacity:1}
+
+/* pricing: a quote slip */
+.price{position:relative;display:grid;border:1px solid var(--line-2);border-radius:22px;background:var(--grain),radial-gradient(60% 90% at 0% 0%,rgba(var(--lamp-a),.10),transparent 60%),var(--bg-2);outline:1px solid var(--line);outline-offset:-9px}
+.price>*{min-width:0;padding:clamp(1.9rem,4.6vw,3.4rem)}
+.price-main{display:flex;flex-direction:column;gap:1.1rem;align-items:flex-start}
+.from{font:500 1.05rem/1 var(--body);color:var(--fg-2)}
+.amount{font:700 clamp(2.9rem,8vw,5.2rem)/1 var(--display);letter-spacing:-.035em;color:var(--lamp);overflow-wrap:anywhere}
+.price-main .note{color:var(--fg-2);max-width:42ch}
+.incl{display:grid;gap:.85rem;align-content:center;border-top:1px dashed var(--line-2)}
+@media(min-width:860px){.price{grid-template-columns:1.1fr .9fr}.incl{border-top:0;border-left:1px dashed var(--line-2)}}
+.incl li{display:flex;gap:.8rem;align-items:flex-start}
+.incl svg{width:20px;height:20px;flex:none;margin-top:.22rem;color:var(--lamp)}
+.incl path{stroke-dasharray:24;stroke-dashoffset:0;transition:stroke-dashoffset .7s var(--ease) calc(var(--rd,0s) + .25s)}
+.incl li.pre path{stroke-dashoffset:24}
+
+/* roadmap: one lit stop, two still to come */
+.rail{display:grid}
+.rail li{position:relative;padding:0 0 2.4rem 2.3rem;display:flex;flex-direction:column;gap:.55rem;min-width:0}
+.rail li:last-child{padding-bottom:0}
+.rail li::before{content:"";position:absolute;left:6px;top:1.1rem;bottom:-.2rem;border-left:1px dashed var(--line-2)}
+.rail li:last-child::before{display:none}
+.node{position:absolute;left:0;top:.2rem;width:13px;height:13px;border-radius:50%;border:1.5px solid var(--fg-3);background:var(--bg)}
+.rail .here .node{border:0;background:var(--lamp);box-shadow:0 0 0 4px rgba(var(--lamp-a),.16),0 0 18px rgba(var(--lamp-a),.7)}
+.rail .here .label{color:var(--lamp)}
+.rail p:not(.label){color:var(--fg-2);font-size:.98rem;max-width:34ch}
+@media(min-width:860px){
+  .rail{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rail li{padding:2.3rem 2rem 0 0}
+  .rail li::before{left:1.3rem;right:.4rem;top:6px;bottom:auto;border-left:0;border-top:1px dashed var(--line-2)}
+  .node{top:0}
+}
+.scope{margin-top:2.4rem;color:var(--fg-2);max-width:62ch}
+
+/* faq */
+.faq{display:grid;gap:clamp(2rem,5vw,4rem)}
+@media(min-width:940px){.faq{grid-template-columns:.8fr 1.2fr}}
+.faq .head{margin-bottom:0}
+.q-item{border-top:1px solid var(--line)}
+.q-item:last-child{border-bottom:1px solid var(--line)}
+.q-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1.2rem;padding:1.3rem 0;background:none;border:0;text-align:left;cursor:pointer;font:600 1.14rem/1.3 var(--display);letter-spacing:-.01em;transition:color .3s}
+.q-btn:hover{color:var(--lamp)}
+.pm{position:relative;flex:none;width:14px;height:14px;margin-right:.2rem}
+.pm::before,.pm::after{content:"";position:absolute;left:0;top:6px;width:14px;height:2px;border-radius:2px;background:var(--lamp);transition:transform .5s var(--ease)}
+.q-item.shut .pm::after{transform:rotate(90deg)}
+.q-item.shut .pm::before{transform:rotate(180deg)}
+.ans{display:grid;grid-template-rows:1fr;transition:grid-template-rows .55s var(--ease)}
+.ans>div{overflow:hidden;min-height:0}
+.ans p{color:var(--fg-2);padding-bottom:1.4rem;max-width:60ch;transition:opacity .5s,transform .55s var(--ease)}
+.q-item.shut .ans{grid-template-rows:0fr}
+.q-item.shut .ans>div{visibility:hidden;transition:visibility 0s .55s}
+.q-item.shut .ans p{opacity:0;transform:translateY(-6px)}
+
+/* contact: the street, with one shop switched on */
+.contact{padding-top:0}
+.street{display:block;width:100%;height:clamp(140px,15vw,180px);color:var(--line-2);-webkit-mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)}
+.street .b{fill:none;stroke:currentColor;stroke-width:1}
+.street .lit-body{fill:var(--bg);stroke:rgba(var(--lamp-a),.6);stroke-width:1}
+.street .lit-sign{fill:var(--lamp)}
+.street text{font:700 10.5px var(--body);letter-spacing:1px;fill:var(--lamp-ink);text-anchor:middle}
+.street.off .lit-g{opacity:0}
+.street.on .lit-g{animation:flick 1.5s linear both}
+.contact .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:1.6rem;padding-top:clamp(2.6rem,6vw,4.5rem)}
+.contact h2{font-size:clamp(2.6rem,7.6vw,5.4rem);max-width:13ch;letter-spacing:-.035em}
+.deva{font-family:var(--deva);font-size:1.3rem;font-weight:500;color:var(--lamp);line-height:1.5}
+.reach{display:grid;gap:.8rem;width:100%;max-width:38rem}
+.reach li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;padding:.85rem 1.1rem;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+.reach .v{font-size:1rem;font-weight:500;user-select:all;overflow-wrap:anywhere;min-width:0;font-variant-numeric:tabular-nums}
+.copy{min-height:44px;padding:.35rem .95rem;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--fg-2);font:500 .85rem/1 var(--body);cursor:pointer;transition:color .25s,border-color .25s}
+.copy:hover{color:var(--fg);border-color:rgba(var(--lamp-a),.7)}
+footer{border-top:1px solid var(--line);padding-block:2rem;color:var(--fg-3);font-size:.875rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem 2rem}
+footer .brand{font-size:1rem;color:var(--fg)}
+
+/* phone only: the main action stays under the thumb */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:1.4rem max(16px,env(safe-area-inset-right,0px)) calc(.8rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(180deg,transparent,var(--bg) 46%);transform:translateY(110%);transition:transform .6s var(--ease);pointer-events:none}
+.dock .btn{width:100%;pointer-events:auto}
+.dock.show{transform:none}
+@media(min-width:720px){.dock{display:none}}
+@media(max-width:719px){footer{padding-bottom:6.5rem}.nav .btn span{display:none}}
+
+/* reveals: set by script, only on what starts below the fold */
+[data-r]{transition:opacity .95s var(--ease) var(--rd,0s),transform .95s var(--ease) var(--rd,0s),clip-path 1.1s var(--ease) var(--rd,0s)}
+[data-r].pre{opacity:0;transform:translateY(18px)}
+[data-r="wipe"]{clip-path:inset(-10% -4% -18% -4%)}
+[data-r="wipe"].pre{opacity:1;transform:translateY(.28em);clip-path:inset(-10% -4% 100% -4%)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .track i{transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#main"><i class="dot" aria-hidden="true"></i>LocalLandingCo</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#package">What you get</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa btn-sm" data-wa data-mag href="#contact" aria-label="WhatsApp us">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+      <span>WhatsApp us</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="hero">
+  <div class="hero-light" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="label fade" style="--d:.05s">Websites for local businesses · Live in 7 days</p>
+      <h1 aria-label="Good businesses deserve to be found.">
+        <span aria-hidden="true">
+          <span class="w"><span style="--i:0">Good</span></span>
+          <span class="w"><span style="--i:1">businesses</span></span>
+          <span class="w"><span style="--i:2">deserve</span></span>
+          <span class="w"><span style="--i:3">to&nbsp;be</span></span>
+          <span class="w"><span class="lit" style="--i:4">found.</span></span>
+        </span>
+      </h1>
+      <p class="lede fade" style="--d:.65s">Your work is good. Online, nobody can see it. We build your first professional website in 7 days, so customers find you on Google, trust what they see, and reach you on WhatsApp or by phone.</p>
+      <div class="cta-row fade" style="--d:.8s">
+        <a class="btn btn-wa" data-wa data-mag href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          Get a quote on WhatsApp
+        </a>
+        <a class="btn btn-ghost" data-mag href="#process">See how it works <span class="arr" aria-hidden="true">↓</span></a>
+      </div>
+      <ul class="hero-facts fade" style="--d:.95s">
+        <li>You don't write anything</li>
+        <li>Built for phones first</li>
+        <li>Enquiries come straight to you</li>
+      </ul>
+    </div>
+
+    <div class="demo" id="demo">
+      <div class="fade" style="--d:.4s">
+        <span class="label">What you tell us</span>
+        <p class="raw" aria-label="“We manufacture MS fabrication structures and have been doing it for 15 years. We work with local factories.”"><span aria-hidden="true"><span style="--i:0">“We</span> <span style="--i:1">manufacture</span> <span style="--i:2">MS</span> <span style="--i:3">fabrication</span> <span style="--i:4">structures</span> <span style="--i:5">and</span> <span style="--i:6">have</span> <span style="--i:7">been</span> <span style="--i:8">doing</span> <span style="--i:9">it</span> <span style="--i:10">for</span> <span style="--i:11">15</span> <span style="--i:12">years.</span> <span style="--i:13">We</span> <span style="--i:14">work</span> <span style="--i:15">with</span> <span style="--i:16">local</span> <span style="--i:17">factories.”</span></span></p>
+      </div>
+      <div class="pipe" aria-hidden="true">
+        <b style="--d:1.55s"></b><span style="--d:1.7s">Positioning</span><b style="--d:1.75s"></b><span style="--d:1.9s">Copy</span><b style="--d:1.95s"></b><span style="--d:2.1s">Your page</span>
+      </div>
+      <div>
+        <span class="label fade" style="--d:1.9s">What your customers see</span>
+        <div class="tilt" id="tilt">
+          <div class="site">
+            <div class="site-bar" aria-hidden="true"><i></i><i></i><i></i><em>yourbusiness.in</em></div>
+            <div class="site-body">
+              <p class="site-kicker" style="--d:2.45s">Industrial fabrication partner for factories and engineering businesses</p>
+              <p class="site-h" style="--d:2.58s">Reliable Industrial Fabrication Solutions Built for Your Requirements</p>
+              <div class="site-btns" style="--d:2.71s"><button class="s-wa" id="mockWa" type="button">Get a Quote on WhatsApp</button><span class="s-call">Call now</span></div>
+              <ul class="site-caps" style="--d:2.84s">
+                <li>MS fabrication</li><li>Structural fabrication</li><li>Custom fabrication</li><li>Industrial assemblies</li>
+              </ul>
+              <p class="site-trust" style="--d:2.97s"><span><b>15 years</b> in fabrication</span><span>Trusted by <b>local factories</b></span></p>
+            </div>
+          </div>
+          <div class="ping" id="ping" role="img" aria-label="Example: a customer's enquiry arrives on the owner's WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            <div><b>New enquiry</b>“Need a quote for an MS shed, 40 × 60 ft.”</div>
+            <time>now</time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Businesses we build for">
+  <div class="marquee-track">
+    <ul>
+      <li>Fabrication workshops</li><li>Car service centres</li><li>Hospitals and clinics</li><li>Manufacturers</li><li>Distributors and traders</li><li>Machine shops</li><li>Industrial suppliers</li><li>Family-run businesses</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Fabrication workshops</li><li>Car service centres</li><li>Hospitals and clinics</li><li>Manufacturers</li><li>Distributors and traders</li><li>Machine shops</li><li>Industrial suppliers</li><li>Family-run businesses</li>
+    </ul>
+  </div>
+</div>
+
+<section id="problem">
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>The problem</p>
+      <h2 data-r="wipe">A customer searched for what you do. They found someone else.</h2>
+      <p class="lede" data-r>Most good local businesses lose enquiries at one of four points. Your page is built to fix all four.</p>
+    </div>
+    <div class="gaps">
+      <article class="gap" data-r><h3>Find</h3><p>They search on Google and your business does not appear.</p><p class="fix">We set up the titles and search terms Google looks for.</p></article>
+      <article class="gap" data-r><h3>Understand</h3><p>They cannot tell what you make, what you repair, or who you serve.</p><p class="fix">A clear list of what you offer, in plain words.</p></article>
+      <article class="gap" data-r><h3>Trust</h3><p>No photos, no certificates, no sign of your years in the trade.</p><p class="fix">Your photos, certificates and experience, up front.</p></article>
+      <article class="gap" data-r><h3>Contact</h3><p>No number to tap. No WhatsApp button. So they move on.</p><p class="fix">WhatsApp and call buttons, always one tap away.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="package" class="tight">
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>What you get</p>
+      <h2 data-r="wipe">One page that does the work of a good salesperson.</h2>
+      <p class="lede" data-r>Everything a new customer needs to choose you, on a single fast page that opens properly on any phone.</p>
+    </div>
+    <ul class="ledger">
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM4 9h16M8 13h8M8 16h5"/></svg>
+        <h3>Says clearly what you do</h3>
+        <div class="row-b"><p>Your business, products and services in plain words a customer understands in ten seconds.</p><ul><li>Introduction</li><li>Products and services</li><li>Capabilities</li><li>Industries served</li></ul></div>
+      </li>
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Shows why to trust you</h3>
+        <div class="row-b"><p>Your experience, certificates, machinery and real photographs, placed where a buyer looks for them.</p><ul><li>Years in business</li><li>Certifications</li><li>Workshop photos</li><li>Customers served</li></ul></div>
+      </li>
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        <h3>Brings the enquiry to your phone</h3>
+        <div class="row-b"><p>One tap opens a WhatsApp chat with you. One tap calls you. No forms that nobody checks.</p><ul><li>WhatsApp button</li><li>Call button</li><li>Address and map link</li></ul></div>
+      </li>
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>
+        <h3>Works on every phone</h3>
+        <div class="row-b"><p>Designed for a small screen and a slow connection first, then for laptops.</p><ul><li>Mobile-first</li><li>Fast loading</li></ul></div>
+      </li>
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <h3>Ready to be found</h3>
+        <div class="row-b"><p>The basics search engines need: the right titles, descriptions, and the words your customers actually type.</p><ul><li>Basic SEO</li><li>Local search terms</li></ul></div>
+      </li>
+      <li class="row" data-r data-lamp>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>
+        <h3>Looks like your business</h3>
+        <div class="row-b"><p>Your logo, your colours and your photographs, on a layout made for your kind of trade.</p><ul><li>Logo and colours</li><li>Your own photos</li></ul></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="rule" data-rule></div>
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>How it works</p>
+      <h2 data-r="wipe">Seven days from first call to live website.</h2>
+      <p class="lede" data-r>You talk about your business. We do the writing, the design and the launch.</p>
+      <div data-r><a class="btn btn-wa" data-wa data-mag href="#contact">Start on WhatsApp</a></div>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="track" id="track" aria-hidden="true"><i></i><b></b></div>
+      <ol class="steps">
+        <li class="step"><p class="label">Day 1</p><h3>You tell us about your business</h3><p>A short call or a simple form. What you make or do, who buys from you, how long you have been at it. Send whatever photos you have on WhatsApp.</p></li>
+        <li class="step"><p class="label">Days 2 to 4</p><h3>We write and build your page</h3><p>AI turns your answers into a clear first draft. A person checks every line, picks the layout for your trade, and adds your logo, colours and photos.</p></li>
+        <li class="step"><p class="label">Days 5 and 6</p><h3>You review it on your own phone</h3><p>We send you a private link. Tell us what to change in a WhatsApp message. Nothing goes live until you say yes.</p></li>
+        <li class="step"><p class="label">Day 7</p><h3>We launch</h3><p>The page goes live on your web address. We test the WhatsApp button, the call button and every link before we hand it over.</p></li>
+        <li class="step"><p class="label">After launch</p><h3>Changes are one message away</h3><p>New product, new number, new photos. Send us a message and we update the page.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="templates">
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>Built for your trade</p>
+      <h2 data-r="wipe">A fabricator and a clinic should not get the same page.</h2>
+      <p class="lede" data-r>Each trade has a layout that puts first what its customers ask first. Pick yours to see the order of the page.</p>
+    </div>
+    <div data-r>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Trade layouts">
+        <span class="pill" id="pill" aria-hidden="true"></span>
+        <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="tpl">Manufacturing</button>
+        <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="tpl" tabindex="-1">Fabrication</button>
+        <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="tpl" tabindex="-1">Distributor</button>
+        <button class="tab" role="tab" id="tab-3" aria-selected="false" aria-controls="tpl" tabindex="-1">Car service</button>
+        <button class="tab" role="tab" id="tab-4" aria-selected="false" aria-controls="tpl" tabindex="-1">Clinic and hospital</button>
+      </div>
+      <div class="tpl" id="tpl" role="tabpanel" aria-labelledby="tab-0">
+        <div class="tpl-copy">
+          <h3 id="tplTitle">Manufacturing</h3>
+          <p id="tplText">Buyers want to know what you make, at what scale, and to what standard. The page leads with products and capacity, then proves quality.</p>
+          <p class="sample">A sample layout. Your page uses only the sections your business needs.</p>
+        </div>
+        <ol class="stack" id="tplStack">
+          <li style="--i:0">Hero</li><li style="--i:1">Company introduction</li><li style="--i:2">Products</li><li style="--i:3">Capabilities</li><li style="--i:4">Industries served</li><li style="--i:5">Machinery and infrastructure</li><li style="--i:6">Quality and certifications</li><li style="--i:7">Why choose us</li><li style="--i:8">Gallery</li><li style="--i:9">Contact and WhatsApp</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="tight">
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>Work</p>
+      <h2 data-r="wipe">Early builds, close to home.</h2>
+      <p class="lede" data-r>LocalLandingCo is new. These are the first businesses on the system.</p>
+    </div>
+    <div class="work">
+      <article class="job glowb" data-r data-lamp>
+        <div class="shot" aria-hidden="true"><div class="frame"><i class="t1"></i><i class="t2"></i><i class="cta"></i><div class="grid"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i></div></div></div>
+        <div class="job-body">
+          <div class="job-top"><h3>Mechatronics Technology</h3><span class="status now">Live</span></div>
+          <p class="label">Industrial sensors · Kolhapur</p>
+          <p class="desc">A trading company that supplies sensors to industry. Its website presents the business and its product range to buyers.</p>
+        </div>
+      </article>
+      <article class="job glowb" data-r data-lamp>
+        <div class="shot" aria-hidden="true"><div class="frame"><i class="t1"></i><i class="t2"></i><i class="cta"></i><div class="list"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i></div></div></div>
+        <div class="job-body">
+          <div class="job-top"><h3>Vaibhavi Hyundai</h3><span class="status">In build</span></div>
+          <p class="label">Multi-brand car service · Phaltan</p>
+          <p class="desc">A car garage that services multiple brands. Its website is being built now.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="statement tight">
+  <div class="wrap">
+    <span class="label">Why we do this</span>
+    <p id="statement">Every good local business, whatever its size, should be easy to <span class="lit">discover,</span> trust and contact online.</p>
+  </div>
+</section>
+
+<section id="pricing" class="tight">
+  <div class="wrap" data-rg>
+    <div class="price" data-r>
+      <div class="price-main">
+        <p class="label">Pricing</p>
+        <p class="from">Starting from</p>
+        <p class="amount" data-price>₹[YOUR PRICE]</p>
+        <p class="note">The final quote depends on how many sections and photographs your page needs. You get the exact number on WhatsApp before any work starts.</p>
+        <a class="btn btn-wa" data-wa data-mag href="#contact">Ask for your quote</a>
+      </div>
+      <ul class="incl">
+        <li data-r><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A complete landing page for your business</li>
+        <li data-r><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>All content written for you</li>
+        <li data-r><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>WhatsApp and call buttons, tested</li>
+        <li data-r><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mobile-friendly design and basic SEO</li>
+        <li data-r><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Live in 7 days</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="next" class="tight">
+  <div class="wrap" data-rg>
+    <div class="head">
+      <p class="label" data-r>Where this goes</p>
+      <h2 data-r="wipe">The website is the first step, not the last.</h2>
+      <p class="lede" data-r>The goal is one place that handles how customers find and reach your business online.</p>
+    </div>
+    <ol class="rail">
+      <li class="here" data-r><span class="node" aria-hidden="true"></span><p class="label">Available now</p><h3>Website presence</h3><p>A professional page that explains your business and makes it easy to contact you.</p></li>
+      <li data-r><span class="node" aria-hidden="true"></span><p class="label">Coming next</p><h3>Google presence</h3><p>Your business set up correctly on Google Search and Maps, linked to your page.</p></li>
+      <li data-r><span class="node" aria-hidden="true"></span><p class="label">Coming next</p><h3>Lead capture</h3><p>Every enquiry, from every source, arriving in one place: your WhatsApp or your phone.</p></li>
+    </ol>
+    <p class="scope" data-r>We do not manage social media accounts. We focus on being found and being contacted.</p>
+  </div>
+</section>
+
+<section id="faq" class="tight">
+  <div class="wrap faq" data-rg>
+    <div class="head">
+      <p class="label" data-r>Questions</p>
+      <h2 data-r="wipe">Before you message us.</h2>
+    </div>
+    <div class="qa" data-r>
+      <div class="q-item"><h3><button class="q-btn" type="button" id="q1" aria-expanded="true" aria-controls="a1">Do I have to write the content?<span class="pm" aria-hidden="true"></span></button></h3><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>No. You answer questions about your business in a call or a form. We write everything and you approve it.</p></div></div></div>
+      <div class="q-item"><h3><button class="q-btn" type="button" id="q2" aria-expanded="true" aria-controls="a2">I don't have good photographs. Is that a problem?<span class="pm" aria-hidden="true"></span></button></h3><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>Phone photos of your workshop, products and team are enough to start. We tell you exactly which pictures to take.</p></div></div></div>
+      <div class="q-item"><h3><button class="q-btn" type="button" id="q3" aria-expanded="true" aria-controls="a3">Do I need a web address already?<span class="pm" aria-hidden="true"></span></button></h3><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>If you have one, we connect the page to it. If you don't, we help you choose and register one.</p></div></div></div>
+      <div class="q-item"><h3><button class="q-btn" type="button" id="q4" aria-expanded="true" aria-controls="a4">How do I change something after launch?<span class="pm" aria-hidden="true"></span></button></h3><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>Send a WhatsApp message with the change. You never have to log in to anything.</p></div></div></div>
+      <div class="q-item"><h3><button class="q-btn" type="button" id="q5" aria-expanded="true" aria-controls="a5">Who builds the page?<span class="pm" aria-hidden="true"></span></button></h3><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>LocalLandingCo is a one-person studio. AI and tested layouts do the repetitive work, which keeps the price low and the delivery fast. A person reviews every page before it goes live.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+<svg class="street" id="street" viewBox="0 0 1200 172" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><defs><pattern id="shut" width="8" height="7" patternUnits="userSpaceOnUse"><path d="M0 .5H8" stroke="currentColor" stroke-opacity=".55"/></pattern><radialGradient id="lampg"><stop offset="0" stop-color="#ffb42a" stop-opacity=".26"/><stop offset="1" stop-color="#ffb42a" stop-opacity="0"/></radialGradient><linearGradient id="doorg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb42a" stop-opacity=".34"/><stop offset="1" stop-color="#ffb42a" stop-opacity=".1"/></linearGradient></defs><g class="b"><rect x="6" y="64" width="120" height="96"/><rect x="14" y="74" width="104" height="18" rx="1"/><rect x="18" y="102" width="96" height="58" fill="url(#shut)"/><rect x="138" y="40" width="120" height="120"/><rect x="146" y="74" width="104" height="18" rx="1"/><rect x="150" y="102" width="96" height="58" fill="url(#shut)"/><rect x="154" y="51" width="22" height="14"/><rect x="220" y="51" width="22" height="14"/><rect x="270" y="56" width="120" height="104"/><rect x="278" y="66" width="104" height="18" rx="1"/><rect x="282" y="94" width="96" height="66" fill="url(#shut)"/><rect x="402" y="28" width="120" height="132"/><rect x="410" y="62" width="104" height="18" rx="1"/><rect x="414" y="90" width="96" height="70" fill="url(#shut)"/><rect x="418" y="39" width="22" height="14"/><rect x="484" y="39" width="22" height="14"/><rect x="534" y="48" width="120" height="112"/><rect x="542" y="58" width="104" height="18" rx="1"/><rect x="546" y="86" width="96" height="74" fill="url(#shut)"/><rect x="666" y="36" width="120" height="124"/><rect x="674" y="70" width="104" height="18" rx="1"/><rect x="678" y="98" width="96" height="62" fill="url(#shut)"/><rect x="682" y="47" width="22" height="14"/><rect x="748" y="47" width="22" height="14"/><rect x="798" y="60" width="120" height="100"/><rect x="806" y="70" width="104" height="18" rx="1"/><rect x="810" y="98" width="96" height="62" fill="url(#shut)"/><rect x="930" y="42" width="120" height="118"/><rect x="938" y="76" width="104" height="18" rx="1"/><rect x="942" y="104" width="96" height="56" fill="url(#shut)"/><rect x="946" y="53" width="22" height="14"/><rect x="1012" y="53" width="22" height="14"/><rect x="1062" y="68" width="120" height="92"/><rect x="1070" y="78" width="104" height="18" rx="1"/><rect x="1074" y="106" width="96" height="54" fill="url(#shut)"/><path d="M0 160.5H1200"/></g><g class="lit-g"><ellipse cx="594" cy="98" rx="230" ry="105" fill="url(#lampg)"/><rect class="lit-body" x="534" y="48" width="120" height="112"/><rect class="lit-sign" x="542" y="58" width="104" height="18" rx="1"/><text x="594" y="70.8">YOUR BUSINESS</text><rect x="546" y="86" width="96" height="74" fill="url(#doorg)" stroke="rgba(255,180,42,.55)"/><polygon points="546,160 642,160 710,172 478,172" fill="rgba(255,180,42,.13)"/></g></svg>
+  <div class="wrap" data-rg>
+    <p class="label" data-r>Start here</p>
+    <h2 data-r="wipe">Let's get your business <span class="lit">found.</span></h2>
+    <p class="deva" lang="mr" data-r>तुमचा व्यवसाय, आता ऑनलाइन.</p>
+    <p class="lede" data-r>Send one message. Tell us what your business does and where it is. We reply with a plan and a quote.</p>
+    <div data-r>
+      <a class="btn btn-wa" data-wa data-mag href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        Message us on WhatsApp
+      </a>
+    </div>
+    <ul class="reach" data-r>
+      <li><span class="label">WhatsApp / Call</span><span class="v" id="vPhone">[YOUR WHATSAPP NUMBER]</span><button class="copy" type="button" id="copyPhone" data-copy="vPhone">Copy</button></li>
+      <li><span class="label">Email</span><span class="v" id="vEmail">[YOUR EMAIL]</span><button class="copy" type="button" id="copyEmail" data-copy="vEmail">Copy</button></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span class="brand"><i class="dot" aria-hidden="true"></i>LocalLandingCo</span><span>Maharashtra, India · © 2026</span></div>
+</footer>
+
+<div class="dock" id="dock"><a class="btn btn-wa" data-wa href="#contact">Get a quote on WhatsApp</a></div>
+
+<script>
+/* ---- Edit these four values. Everything on the page updates from here. ---- */
+var CONFIG = {
+  whatsapp: "",     // digits only with country code, e.g. "919876543210"
+  phoneDisplay: "", // how the number should read, e.g. "+91 98765 43210"
+  email: "",        // e.g. "hello@locallandingco.in"
+  price: ""         // e.g. "₹9,999"
+};
+
+(function () {
+  var $ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var id = function (x) { return document.getElementById(x); };
+  var clamp = function (v) { return Math.max(0, Math.min(1, v)); };
+  var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var IO = "IntersectionObserver" in window;
+
+  // 1. Contact details from CONFIG
+  if (CONFIG.whatsapp) {
+    var msg = encodeURIComponent("Hi LocalLandingCo, I would like a website for my business.");
+    $("[data-wa]").forEach(function (a) { a.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + msg; a.target = "_blank"; a.rel = "noopener"; });
+    id("vPhone").textContent = CONFIG.phoneDisplay || "+" + CONFIG.whatsapp;
+  }
+  if (CONFIG.email) id("vEmail").textContent = CONFIG.email;
+  if (CONFIG.price) $("[data-price]").forEach(function (e) { e.textContent = CONFIG.price; });
+
+  // 2. Copy buttons
+  $("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = id(b.getAttribute("data-copy"));
+      var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1600); };
+      var select = function () { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(el.textContent).then(done, select); } catch (e) { select(); }
+    });
+  });
+
+  // 3. Trade layout tabs, with one pill that slides between them
+  var TPL = [
+    ["Manufacturing", "Buyers want to know what you make, at what scale, and to what standard. The page leads with products and capacity, then proves quality.",
+      ["Hero", "Company introduction", "Products", "Capabilities", "Industries served", "Machinery and infrastructure", "Quality and certifications", "Why choose us", "Gallery", "Contact and WhatsApp"]],
+    ["Fabrication", "Customers arrive with a drawing or a requirement. The page shows what you can fabricate, in which materials, and the projects you have delivered.",
+      ["Hero", "Fabrication services", "Capabilities", "Materials", "Industries served", "Projects", "Workshop and machinery", "Why us", "Enquiry on WhatsApp"]],
+    ["Distributor", "Buyers look for a brand or a part. The page puts brands and product categories first, then shows how far you deliver.",
+      ["Hero", "Brands and products", "Product categories", "Industries served", "Distribution network", "Why choose us", "Testimonials", "Contact and WhatsApp"]],
+    ["Car service", "A car owner wants to know three things: do you service my brand, where are you, and can I book now.",
+      ["Hero", "Services and repairs", "Brands we service", "Workshop and equipment", "Why choose us", "Customer reviews", "Location and timings", "Book on WhatsApp"]],
+    ["Clinic and hospital", "Patients and families need facts quickly: which departments, which doctors, what timings, and the number to call.",
+      ["Hero", "Departments and services", "Doctors", "Facilities", "Timings and emergency contact", "Patient information", "Location and directions", "Call and WhatsApp"]]
+  ];
+  var tabsEl = id("tabs"), tabs = $(".tab"), pill = id("pill"), panel = id("tpl"), stack = id("tplStack"), cur = 0;
+  function movePill() { var t = tabs[cur]; pill.style.width = t.offsetWidth + "px"; pill.style.transform = "translateX(" + t.offsetLeft + "px)"; }
+  function show(i, focus) {
+    cur = i;
+    tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === i); t.tabIndex = k === i ? 0 : -1; });
+    id("tplTitle").textContent = TPL[i][0]; id("tplText").textContent = TPL[i][1];
+    stack.textContent = "";
+    TPL[i][2].forEach(function (name, k) { var li = document.createElement("li"); li.textContent = name; li.style.setProperty("--i", k); stack.appendChild(li); });
+    panel.setAttribute("aria-labelledby", "tab-" + i);
+    movePill();
+    tabsEl.scrollTo({ left: tabs[i].offsetLeft - (tabsEl.clientWidth - tabs[i].offsetWidth) / 2, behavior: calm ? "auto" : "smooth" });
+    if (focus) tabs[i].focus({ preventScroll: true });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { show(i); });
+    t.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") show((i + 1) % tabs.length, true);
+      if (e.key === "ArrowLeft") show((i + tabs.length - 1) % tabs.length, true);
+    });
+  });
+  tabsEl.classList.add("js"); pill.style.transition = "none"; movePill();
+  requestAnimationFrame(function () { pill.style.transition = ""; });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+
+  // 4. Questions open and close smoothly
+  $(".q-item").forEach(function (item) {
+    var b = item.querySelector(".q-btn");
+    item.classList.add("shut"); b.setAttribute("aria-expanded", "false");
+    b.addEventListener("click", function () { var open = item.classList.toggle("shut"); b.setAttribute("aria-expanded", String(!open)); });
+  });
+
+  // 5. Reveals, one group at a time, only for what starts below the fold
+  if (!calm && IO) {
+    var gio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        $(".pre", e.target).forEach(function (k) { k.classList.remove("pre"); });
+        e.target.classList.remove("pre"); gio.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -10% 0px" });
+    $("[data-rg]").forEach(function (g) {
+      if (g.getBoundingClientRect().top < innerHeight * 0.9) return;
+      $("[data-r]", g).forEach(function (k, i) { k.classList.add("pre"); k.style.setProperty("--rd", Math.min(i, 9) * 0.07 + "s"); });
+      gio.observe(g);
+    });
+    $("[data-rule]").forEach(function (r) { if (r.getBoundingClientRect().top > innerHeight) { r.classList.add("pre"); gio.observe(r); } });
+
+    // the hero demo and the street wait until they are on screen
+    var demo = id("demo");
+    if (demo.getBoundingClientRect().top > innerHeight * 0.85) {
+      demo.classList.add("wait");
+      new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { demo.classList.remove("wait"); o.disconnect(); } }, { threshold: 0.12 }).observe(demo);
+    }
+    var street = id("street"); street.classList.add("off");
+    new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { street.classList.remove("off"); street.classList.add("on"); o.disconnect(); } }, { threshold: 0.6 }).observe(street);
+  }
+
+  // 6. The mock WhatsApp button really "sends" an enquiry
+  var ping = id("ping");
+  id("mockWa").addEventListener("click", function () { ping.classList.remove("go"); void ping.offsetWidth; ping.classList.add("go"); });
+
+  // 7. The statement lights up word by word
+  var st = id("statement"), words = [], litN = -1;
+  if (!calm) {
+    $("*", st).forEach(function (e) { e.classList.add("wd"); });
+    Array.prototype.slice.call(st.childNodes).forEach(function (n) {
+      if (n.nodeType !== 3) return;
+      var f = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(function (p) {
+        if (!p.trim()) { f.appendChild(document.createTextNode(p)); return; }
+        var s = document.createElement("span"); s.className = "wd"; s.textContent = p; f.appendChild(s);
+      });
+      st.replaceChild(f, n);
+    });
+    words = $(".wd", st); st.classList.add("split");
+  }
+
+  // 8. One scroll handler: nav, process line, statement, phone dock
+  var nav = id("nav"), track = id("track"), fill = track.querySelector("i"), head = track.querySelector("b"), steps = $(".step");
+  var dock = id("dock"), hero = id("hero"), contact = id("contact"), ticking = false;
+  function paint() {
+    ticking = false;
+    var vh = innerHeight, y = window.pageYOffset;
+    nav.classList.toggle("stuck", y > 12);
+    var r = track.getBoundingClientRect(), mark = vh * 0.62, p = clamp((mark - r.top) / r.height);
+    if (!calm) {
+      fill.style.transform = "scaleY(" + p.toFixed(4) + ")";
+      head.style.transform = "translate3d(0," + (p * r.height).toFixed(1) + "px,0)";
+      head.style.opacity = p > 0.005 && p < 0.995 ? 1 : 0;
+    }
+    steps.forEach(function (s) { s.classList.toggle("on", calm || s.getBoundingClientRect().top < mark); });
+    if (words.length) {
+      var n = Math.round(clamp((vh * 0.9 - st.getBoundingClientRect().top) / (vh * 0.5)) * words.length);
+      if (n !== litN) { words.forEach(function (w, i) { w.classList.toggle("on", i < n); }); litN = n; }
+    }
+    dock.classList.toggle("show", y > hero.offsetHeight * 0.8 && contact.getBoundingClientRect().top > vh * 0.75);
+  }
+  addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  addEventListener("resize", function () { movePill(); paint(); });
+  paint();
+
+  // 9. The lit dot in the nav follows the section you are reading
+  if (IO) {
+    var links = {}; $(".nav ul a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var a = links[e.target.id]; if (!a) return;
+        if (e.isIntersecting) { $(".nav ul a").forEach(function (x) { x.removeAttribute("aria-current"); }); a.setAttribute("aria-current", "true"); }
+        else a.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(links).forEach(function (k) { spy.observe(id(k)); });
+  }
+
+  // 10. Mouse only: rules and borders light up under the pointer, buttons lean towards it, the page tilts
+  if (fine && !calm) {
+    document.addEventListener("pointermove", function (e) {
+      var t = e.target.closest ? e.target.closest("[data-lamp]") : null;
+      if (!t) return;
+      var r = t.getBoundingClientRect();
+      t.style.setProperty("--mx", (e.clientX - r.left) + "px"); t.style.setProperty("--my", (e.clientY - r.top) + "px");
+    }, { passive: true });
+    $("[data-mag]").forEach(function (b) {
+      b.addEventListener("pointermove", function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.setProperty("--tx", ((e.clientX - r.left - r.width / 2) * 0.16).toFixed(1) + "px");
+        b.style.setProperty("--ty", ((e.clientY - r.top - r.height / 2) * 0.3).toFixed(1) + "px");
+      });
+      b.addEventListener("pointerleave", function () { b.style.setProperty("--tx", "0px"); b.style.setProperty("--ty", "0px"); });
+    });
+    var tilt = id("tilt"), zone = id("demo");
+    zone.addEventListener("pointermove", function (e) {
+      var r = zone.getBoundingClientRect();
+      tilt.style.setProperty("--ry", (((e.clientX - r.left) / r.width - 0.5) * 5).toFixed(2) + "deg");
+      tilt.style.setProperty("--rx", (-((e.clientY - r.top) / r.height - 0.5) * 4).toFixed(2) + "deg");
+    });
+    zone.addEventListener("pointerleave", function () { tilt.style.setProperty("--rx", "0deg"); tilt.style.setProperty("--ry", "0deg"); });
+  }
+})();
+</script>
+
+</body>
+</html>
